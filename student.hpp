@@ -4,7 +4,8 @@
 using namespace std; 
 
 class Student {
-  char name[50];
+  string firstName;
+string lastName;
   float mathGrade, scienceGrade, peGrade, geoGrade, artGrade;
   float gpa;
   char l_grade;
@@ -24,8 +25,10 @@ void calculate() {
 }
 public:
   void getData() {
-    cout << "Enter student's name: ";
-    cin >> name;
+    cout << "Enter student's first name: ";
+    cin >> firstName;
+    cout << "Enter student's last name: ";
+    cin >> lastName;
     cout << "Enter grade percentage for math: ";
     cin >> mathGrade;
     cout << "Enter grade percentage for science: ";
@@ -40,7 +43,7 @@ public:
   }
 
 void showData() {
-  cout << "\n\nName of student: \n" << name << endl;
+  cout << "\n\nName of student: \n" << firstName << " " << lastName << endl;
   cout << "Grade in math: " << mathGrade << endl;
   cout << "Grade in science: " << scienceGrade << endl;
   cout << "Grade in physical education: " << peGrade << endl;
