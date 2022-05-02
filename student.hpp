@@ -11,10 +11,13 @@ class Student {
   float mathGrade, scienceGrade, englishGrade, peGrade,   geoGrade, artGrade;
   float gpa;
   char l_grade;
+  string l_grade_plus;
 
 void calculate() {
   gpa = (mathGrade + scienceGrade + englishGrade + peGrade + geoGrade + artGrade) / 6;
-  if(gpa >= 90) {
+  if(gpa >= 100) {
+    l_grade_plus = "A+";
+  } else if (gpa >= 90) {
     l_grade = 'A';
   } else if (gpa < 90 && gpa >= 80) {
     l_grade = 'B';
@@ -58,6 +61,6 @@ void showData() {
   cout << "Grade in phys ed:\t\t\t" << peGrade << endl;
   cout << "Grade in geography:\t\t\t" << geoGrade << endl;
   cout << "Grade in art:\t\t\t\t" << artGrade << endl;
-  cout << "\nStudent's overall gpa:\t\t" << setprecision(4) << gpa << endl;
+  cout << "\nStudent's overall gpa:\t\t" << setprecision(4) << gpa << "%, "<< l_grade_plus << endl;
 }
 };
